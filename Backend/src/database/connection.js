@@ -1,7 +1,7 @@
-const moongose = require('mongoose');
+const mongoose = require('mongoose');
 
-moongose.connect('mongodb://localhost:3000/node');
+mongoose.connect('mongodb://localhost:2717/node');
 
-mongoose.Promisse = global.Promisse;
+mongoose.Promise = global.Promise;
 
 module.exports = mongoose;
