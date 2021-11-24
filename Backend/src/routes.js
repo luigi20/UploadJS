@@ -5,7 +5,7 @@ const multerConfig = require('./config/multer');
 const registerPost = require('./models/Post');
 
 routes.post('/register', multer(multerConfig).single('file'), async (req, res) => {
-    const { originalname: name, size, filename: key } = req.file;
+    const { originalname: name, size, key } = req.file;
 
     const register = await registerPost.create({
         name,
